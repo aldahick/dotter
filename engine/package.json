@@ -5,20 +5,25 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "lint": "eslint . --ext .ts"
+    "lint": "eslint . --ext .ts",
+    "test": "mocha dist/*.spec.js",
+    "test:dev": "tsc-watch --onSuccess \"yarn test\""
   },
   "dependencies": {
     "lodash": "4.17.15"
   },
   "devDependencies": {
+    "@types/chai": "4.2.4",
     "@types/lodash": "4.14.144",
     "@types/mocha": "5.2.7",
     "@typescript-eslint/eslint-plugin": "2.6.1",
     "@typescript-eslint/parser": "2.6.1",
+    "chai": "4.2.0",
     "eslint": "6.6.0",
     "eslint-plugin-import": "2.18.2",
     "eslint-plugin-prefer-arrow": "1.1.6",
     "mocha": "6.2.2",
+    "tsc-watch": "4.0.0",
     "typescript": "3.7.2"
   }
 }

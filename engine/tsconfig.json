@@ -1,10 +1,12 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "lib": ["es5"],
+    "target": "es2017",
+    "lib": ["es5", "es2015", "es2016", "es2017"],
     "strict": true,
     "noUnusedLocals": true,
     "inlineSourceMap": true,
-    "outDir": "dist"
-  }
+    "outDir": "dist",
+    "module": "commonjs"
+  },
+  "include": ["./src/*.ts", "./src/**/*.ts"]
 }

@@ -3,7 +3,7 @@ import { Vector2 } from "./util/Vector2";
 import { GameSession } from "./GameSession";
 
 export class EnemySpawner {
-  static maxCount = 25;
+  static maxCount = 10;
   /** Milliseconds */
   static spawnInterval = 500;
 

@@ -4,4 +4,7 @@ export class Entity extends AccelerableObject {
   private static lastId = 0;
 
   readonly id = ++Entity.lastId;
+
+  /** Milliseconds */
+  readonly createdAt = Date.now();
 }

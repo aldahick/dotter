@@ -1,11 +1,11 @@
 {
   "eslint.workingDirectories": [
     {
-      "directory": "client",
+      "directory": "engine",
       "changeProcessCWD": true
     },
     {
-      "directory": "engine",
+      "directory": "web",
       "changeProcessCWD": true
     }
   ]

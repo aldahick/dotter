@@ -18,7 +18,10 @@ export class BaseVector2<Value> {
     return this.x === other.x && this.y === other.y;
   }
 
-  both<Other, Return>(other: BaseVector2<Other>, predicate: (a: Value, b: Other, key: "x" | "y") => Return): BaseVector2<Return> {
+  both<Other, Return>(other: BaseVector2<Other> | Other, predicate: (a: Value, b: Other, key: "x" | "y") => Return): BaseVector2<Return> {
+    if (!(other instanceof BaseVector2)) {
+      return this.both(new BaseVector2(other, other), predicate);
+    }
     return this.map((value, key) => predicate(value, other[key], key));
   }
 

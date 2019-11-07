@@ -7,7 +7,7 @@ import { Entity } from "./Entity";
  * Could also be a stationary target.
  */
 export class Dot extends Entity {
-  static readonly acceleration = 0.5;
+  static readonly acceleration = 0.375;
   static readonly deceleration = Dot.acceleration / 4;
 
   update(session: GameSession) {

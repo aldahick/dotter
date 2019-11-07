@@ -41,7 +41,7 @@ export class AccelerableObject {
    */
   clampToBounds(min: Vector2, max: Vector2): boolean {
     const oldPosition = new Vector2(this.position);
-    this.position = this.position.clamp(min, max);
+    this.position = this.position.clamp(min, max.subtract(this.size));
     let wasClamped = false;
     if (this.position.x !== oldPosition.x) {
       this.velocity.x = 0;

@@ -6,7 +6,8 @@
     "noUnusedLocals": true,
     "inlineSourceMap": true,
     "outDir": "dist",
-    "module": "commonjs"
+    "module": "commonjs",
+    "declaration": true
   },
   "include": ["./src/*.ts", "./src/**/*.ts"]
 }
